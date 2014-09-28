@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		
+		<title>Hello World</title>
+	
+		<script type="text/javascript" charset="utf-8">
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener('plusready',plusReady,false);
+}
+
+function plusReady(){
+	var self = plus.webview.currentWebview();
+}
+//打开新webview的窗口
+function openNewWebView(){
+	var url = "http://m.csdn.net/";
+	plus.webview.create(url).show();
+}
+		</script>
+	</head>
+	<body>
+		Hello World<br/>
+		<button onclick="openNewWebView()">打开百度</button>
+	</body>
+</html>
